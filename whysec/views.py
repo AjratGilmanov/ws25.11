@@ -1,12 +1,12 @@
-from django.shortcuts import render
+
 from django.http import HttpResponse
 # Create your views here.
 
 
 def httpresp(request):
-    host = request.META["HTTP_HOST"];
-    browser = request.META["HTTP_USER_AGENT"];
-    ip = request.META["REMOTE_ADDR"];
+    host = request.META["HTTP_HOST"]
+    browser = request.META["HTTP_USER_AGENT"]
+    ip = request.META["REMOTE_ADDR"]
     return HttpResponse(f"""
         <p>Host: {host}</p>
         <p>Browser info: {browser}</p>
