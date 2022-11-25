@@ -17,9 +17,8 @@ def fail(request):
     return HttpResponse("<center><bold><h1>ОШИБКА 400</h1></bold></center>", status = 400, reason= "Incorrect data")
 
 
-def user(request,name = 'John',age = '16'):
+def user(request,postfold = "Johns_folder",postnum = '16'):
     return HttpResponse(f"""
-    <p>Name: {name}</p>
-    <p>age: {age}</p>
+    <p>Name of folder: {postfold}</p>
+    <p>post number: {postnum}</p>
     """)
-
